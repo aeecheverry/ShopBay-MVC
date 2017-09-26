@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="EbayModelStoreContainer" CdmEntityContainer="EbayEntities">
+  <EntityContainerMapping StorageEntityContainer="ShopBayModelStoreContainer" CdmEntityContainer="EbayEntities">
     <EntitySetMapping Name="Auction">
-      <EntityTypeMapping TypeName="EbayModel.Auction">
+      <EntityTypeMapping TypeName="ShopBayModel.Auction">
         <MappingFragment StoreEntitySet="Auction">
           <ScalarProperty Name="AuctionID" ColumnName="AuctionID" />
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -12,7 +12,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Category">
-      <EntityTypeMapping TypeName="EbayModel.Category">
+      <EntityTypeMapping TypeName="ShopBayModel.Category">
         <MappingFragment StoreEntitySet="Category">
           <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
           <ScalarProperty Name="CategoryTitle" ColumnName="CategoryTitle" />
@@ -22,7 +22,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="OnSaleProducts">
-      <EntityTypeMapping TypeName="EbayModel.OnSaleProducts">
+      <EntityTypeMapping TypeName="ShopBayModel.OnSaleProducts">
         <MappingFragment StoreEntitySet="OnSaleProducts">
           <ScalarProperty Name="SaleID" ColumnName="SaleID" />
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -30,7 +30,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Products">
-      <EntityTypeMapping TypeName="EbayModel.Products">
+      <EntityTypeMapping TypeName="ShopBayModel.Products">
         <MappingFragment StoreEntitySet="Products">
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -44,7 +44,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ShippingOptions">
-      <EntityTypeMapping TypeName="EbayModel.ShippingOptions">
+      <EntityTypeMapping TypeName="ShopBayModel.ShippingOptions">
         <MappingFragment StoreEntitySet="ShippingOptions">
           <ScalarProperty Name="ShippingID" ColumnName="ShippingID" />
           <ScalarProperty Name="ArrivalTime" ColumnName="ArrivalTime" />
@@ -54,7 +54,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="EbayModel.Users">
+      <EntityTypeMapping TypeName="ShopBayModel.Users">
         <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="Username" ColumnName="Username" />
@@ -71,7 +71,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="BidList">
-      <EntityTypeMapping TypeName="EbayModel.BidList">
+      <EntityTypeMapping TypeName="ShopBayModel.BidList">
         <MappingFragment StoreEntitySet="BidList">
           <ScalarProperty Name="AuctionID" ColumnName="AuctionID" />
           <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -80,7 +80,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ImageCatalog">
-      <EntityTypeMapping TypeName="EbayModel.ImageCatalog">
+      <EntityTypeMapping TypeName="ShopBayModel.ImageCatalog">
         <MappingFragment StoreEntitySet="ImageCatalog">
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
           <ScalarProperty Name="ProductImage" ColumnName="ProductImage" />
@@ -88,7 +88,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Movements">
-      <EntityTypeMapping TypeName="EbayModel.Movements">
+      <EntityTypeMapping TypeName="ShopBayModel.Movements">
         <MappingFragment StoreEntitySet="Movements">
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="Type" ColumnName="Type" />
@@ -97,7 +97,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ProductCommentary">
-      <EntityTypeMapping TypeName="EbayModel.ProductCommentary">
+      <EntityTypeMapping TypeName="ShopBayModel.ProductCommentary">
         <MappingFragment StoreEntitySet="ProductCommentary">
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -107,7 +107,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ProductsSold">
-      <EntityTypeMapping TypeName="EbayModel.ProductsSold">
+      <EntityTypeMapping TypeName="ShopBayModel.ProductsSold">
         <MappingFragment StoreEntitySet="ProductsSold">
           <ScalarProperty Name="BuyerID" ColumnName="BuyerID" />
           <ScalarProperty Name="SellerID" ColumnName="SellerID" />
@@ -120,7 +120,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ProfileCommentary">
-      <EntityTypeMapping TypeName="EbayModel.ProfileCommentary">
+      <EntityTypeMapping TypeName="ShopBayModel.ProfileCommentary">
         <MappingFragment StoreEntitySet="ProfileCommentary">
           <ScalarProperty Name="UserID" ColumnName="UserID" />
           <ScalarProperty Name="RatedUserID" ColumnName="RatedUserID" />
@@ -129,7 +129,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="ProductCategory" TypeName="EbayModel.ProductCategory" StoreEntitySet="ProductCategory">
+    <AssociationSetMapping Name="ProductCategory" TypeName="ShopBayModel.ProductCategory" StoreEntitySet="ProductCategory">
       <EndProperty Name="Category">
         <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
       </EndProperty>

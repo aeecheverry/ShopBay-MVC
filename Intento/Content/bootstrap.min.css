@@ -7,4 +7,92 @@
 .marginTopContent {
     margin-top: 62px;
 }
+
+/*Categories*/
+.categoriesCard {
+    height: 346px;
+    min-width: 275px;
+    max-width: 380px;
+    transition: all 0.2s ease-out;
+}
+
+    .categoriesCard a {
+        text-decoration: none;
+    }
+
+.categoriesCardHover:hover {
+    transform: scale(1.028);
+}
+
+.categoriesCard img {
+    height: 230px;
+}
+
+.shadowCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.titleCategories {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.descriptionCategories {
+    overflow: hidden;
+}
+
+/*Productoo vista sola de producto*/
+.imageProduct {
+    height: auto
+}
+
+.marginTopContent {
+    margin-top: 62px;
+}
+
+#carouselExampleIndicators {
+    max-height: 268px;
+    max-width: 475px;
+}
+/*Establece transicion y dimensiones fijas para la card del producto,*/
+.productCard {
+    height: 245px;
+    max-width: 260px;
+    min-width: 200px;
+    transition: all 0.2s ease-out;
+}
+/*Productooossss vista de los productos por categorias*/
+/*Efecto aumento al poner el mouse sobre el card*/
+.productCardHover:hover {
+    transform: scale(1.028);
+}
+
+.shadowCard {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.productCard a {
+    font-size: small;
+    color: #374250;
+    text-decoration: none;
+}
+
+    .productCard a:hover {
+        color: dodgerblue;
+    }
+
+.productCard img {
+    height: 150px;
+}
+
+.titleProduct {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menuBar a {
+    text-decoration: none;
+    color: #333;
+}
 /*# sourceMappingURL=bootstrap.min.css.map */
