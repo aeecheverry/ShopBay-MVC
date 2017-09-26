@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse row" id="navbarSupportedContent">
             <div class="form-inline my-1 my-lg-1 col justify-content-md-center">
                 <input class="form-control mr-sm-2 w-50" type="text" placeholder="Search" aria-label="Search" id="bus" runat="server" />
-                <button class="btn btn-outline-primary my-1 my-sm-0" type="submit" id="but" runat="server">Search</button>
+                <button class="btn btn-outline-primary my-1 my-sm-0" type="submit" id="but" runat="server" onclick="">Search</button>
                 <label id="controlID" runat="server"></label>
             </div>
             <div class="navbar-nav mr-auto col-2 col-xs-5 col-sm-4 col-md-3 justify-content-end">
@@ -32,7 +32,6 @@
 
     <div class="container-fluid body-content">
         @RenderBody()
-        
     </div>
     <!--el footer-->
     <footer class="bg-light pt-5 pb-2 mt-4 w-100" style="position:absolute;bottom:auto;left:0px">

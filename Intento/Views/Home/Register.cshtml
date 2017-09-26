@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<div class="container marginTopContent pt-5">
+
+    <div class="row">
+
+        <!--Titulo-->
+        <div class="col-12">
+            <h2 class="display-5">Join our community!</h2>
+        </div>
+
+        <div class="col-12">
+            <hr />
+        </div>
+
+        <!--Cargar imagen de perfil-->
+        <div class="col-lg-4">
+            <div class="card">
+                <a href="#" class="">
+                    <img class="card-img-top" src="https://cdn0.vox-cdn.com/uploads/chorus_asset/file/8667595/xboxonex.jpg" alt="PlayStation 4" runat="server" id="profilePicture" />
+                    <div class="card-body text-center lead">
+                        <input class="btn btn-outline-primary my-1 my-sm-0 w-50" type="button" id="file" value="Upload" style="border-radius: 5px;">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!--Campo de registro de usuario-->
+        <div class="col-lg-8">
+
+            <form class="row" runat="server" name="form1" id="Formulario1">
+                <div class="col-md-auto">
+                    <div class="form-group">
+                        <label>I'm a:</label>
+                        <select class="form-control" runat="server" id="typeSeller" onchange="changeStuff(this)">
+                            <option id="Person">Person</option>
+                            <option id="Company">Company</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label runat="server" id="nameLabel">Name</label>
+                        <input class="form-control" type="text" maxlength="20" runat="server" id="nameTextField" onchange="verifyCorrect">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label runat="server" id="informationLabel">Last Name</label>
+                    <input class="form-control" type="text" maxlength="20" runat="server" id="informationTextField" onchange="verifyCorrect">
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Telephone</label>
+                        <input class="form-control" type="tel" maxlength="10" runat="server" id="telephoneTextField" onchange="verifyCorrect" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Mail</label>
+                        <input class="form-control" type="email" maxlength="30" runat="server" id="mailTextField" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>User Name</label>
+                        <input class="form-control" type="text" maxlength="25" runat="server" id="userNameTextField" onchange="verifyCorrect">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input class="form-control" type="password" maxlength="16" runat="server" id="passWordTextField" onchange="verifyCorrect">
+                    </div>
+                </div>
+                <div class="col-12 pt-1">
+                    <div class="text-right">
+                        <asp:Button class="btn btn-primary mb-0" runat="server" id="RegisterButton" OnClick="registerNewUser" Text="Register" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

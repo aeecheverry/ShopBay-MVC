@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "SignIn";
+}
+<div class="container marginTopContent pt-5">
+    <div class="row">
+
+        <div class="container">
+
+            <!--Titulo-->
+            <h2 class="col-12 lead">Sign In with your ShopBay account</h2>
+            <hr />
+
+            <!--Campo de inicio de sesión-->
+            <form class="col-8">
+                <label>User Name</label>
+                <input class="form-control w-75 my-2" type="text" placeholder="username/someone@dom.nn" aria-label="Sing In" maxlength="32" />
+                <label>Password</label>
+                <input class="form-control w-75 my-2" type="password" maxlength="16" placeholder="password" />
+                <button class="btn btn-primary my-2" type="submit" onclick="doSomething()">Sign In</button>
+                Don't have an account?<a href="Register.aspx" class="clearfix my-2 d-md-inline d-block">Sign up now</a>
+            </form>
+
+
+        </div>
+    </div>
+</div>

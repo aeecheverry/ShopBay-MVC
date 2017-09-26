@@ -12,5 +12,31 @@ namespace Intento.Controllers
         {
             return View();
         }
+
+        public ActionResult Products()
+        {
+            return View();
+        }
+        public ActionResult Product()
+        {
+            return View();
+        }
+        public ActionResult APUser()
+        {
+            return View();
+        }
+        public ActionResult Profile()
+        {
+            return View();
+        }
+        public ActionResult Register()
+        {
+            return View();
+        }
+        public ActionResult SignIn()
+        {
+            return View();
+        }
+
     }
 }
