@@ -6,9 +6,10 @@ using System.Web.Mvc;
 
 namespace Intento.Controllers
 {
-    public class HomeController : Controller
+    public class ProductsController : Controller
     {
-        public ActionResult Index()
+        // GET: Products
+        public ActionResult Products()
         {
             return View();
         }

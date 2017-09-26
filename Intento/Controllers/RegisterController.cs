@@ -6,9 +6,10 @@ using System.Web.Mvc;
 
 namespace Intento.Controllers
 {
-    public class HomeController : Controller
+    public class RegisterController : Controller
     {
-        public ActionResult Index()
+        // GET: Register
+        public ActionResult Register()
         {
             return View();
         }

@@ -6,11 +6,14 @@ using System.Web.Mvc;
 
 namespace Intento.Controllers
 {
-    public class HomeController : Controller
+    public class APUserController : Controller
     {
-        public ActionResult Index()
+     
+        public ActionResult APUser()
         {
             return View();
         }
+
+        
     }
 }
