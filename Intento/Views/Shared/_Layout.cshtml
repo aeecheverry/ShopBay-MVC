@@ -24,8 +24,8 @@
                 <label id="controlID" runat="server"></label>
             </div>
             <div class="navbar-nav mr-auto col-2 col-xs-5 col-sm-4 col-md-3 justify-content-end">
-                <a class="nav-item nav-link" id="signinButton">Sign In<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" id="signupButton">Sign Up</a>
+                <a>@Html.ActionLink("Sign In" , "SignIn" , "SignIn" , "SignIn" , new { @class="nav-item nav-link" })<span class="sr-only">(current)</span></a>
+                <a>@Html.ActionLink("Register", "Register", "Register" , "Register", new { @class = "nav-item nav-link" })</a>
             </div>
         </div>
     </nav>

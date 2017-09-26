@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EbayModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="ShopBayModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Auction">
           <Key>
             <PropertyRef Name="AuctionID" />
@@ -365,7 +365,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EbayModelStoreContainer">
+        <EntityContainer Name="ShopBayModelStoreContainer">
           <EntitySet Name="Auction" EntityType="Self.Auction" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="OnSaleProducts" EntityType="Self.OnSaleProducts" Schema="dbo" store:Type="Tables" />
@@ -502,7 +502,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="EbayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="ShopBayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Auction">
           <Key>
             <PropertyRef Name="AuctionID" />
@@ -942,9 +942,9 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EbayModelStoreContainer" CdmEntityContainer="EbayEntities">
+        <EntityContainerMapping StorageEntityContainer="ShopBayModelStoreContainer" CdmEntityContainer="EbayEntities">
           <EntitySetMapping Name="Auction">
-            <EntityTypeMapping TypeName="EbayModel.Auction">
+            <EntityTypeMapping TypeName="ShopBayModel.Auction">
               <MappingFragment StoreEntitySet="Auction">
                 <ScalarProperty Name="AuctionID" ColumnName="AuctionID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -954,7 +954,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Category">
-            <EntityTypeMapping TypeName="EbayModel.Category">
+            <EntityTypeMapping TypeName="ShopBayModel.Category">
               <MappingFragment StoreEntitySet="Category">
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
                 <ScalarProperty Name="CategoryTitle" ColumnName="CategoryTitle" />
@@ -964,7 +964,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OnSaleProducts">
-            <EntityTypeMapping TypeName="EbayModel.OnSaleProducts">
+            <EntityTypeMapping TypeName="ShopBayModel.OnSaleProducts">
               <MappingFragment StoreEntitySet="OnSaleProducts">
                 <ScalarProperty Name="SaleID" ColumnName="SaleID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -972,7 +972,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="EbayModel.Products">
+            <EntityTypeMapping TypeName="ShopBayModel.Products">
               <MappingFragment StoreEntitySet="Products">
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -986,7 +986,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ShippingOptions">
-            <EntityTypeMapping TypeName="EbayModel.ShippingOptions">
+            <EntityTypeMapping TypeName="ShopBayModel.ShippingOptions">
               <MappingFragment StoreEntitySet="ShippingOptions">
                 <ScalarProperty Name="ShippingID" ColumnName="ShippingID" />
                 <ScalarProperty Name="ArrivalTime" ColumnName="ArrivalTime" />
@@ -996,7 +996,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="EbayModel.Users">
+            <EntityTypeMapping TypeName="ShopBayModel.Users">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
@@ -1013,7 +1013,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="BidList">
-            <EntityTypeMapping TypeName="EbayModel.BidList">
+            <EntityTypeMapping TypeName="ShopBayModel.BidList">
               <MappingFragment StoreEntitySet="BidList">
                 <ScalarProperty Name="AuctionID" ColumnName="AuctionID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
@@ -1022,7 +1022,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ImageCatalog">
-            <EntityTypeMapping TypeName="EbayModel.ImageCatalog">
+            <EntityTypeMapping TypeName="ShopBayModel.ImageCatalog">
               <MappingFragment StoreEntitySet="ImageCatalog">
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="ProductImage" ColumnName="ProductImage" />
@@ -1030,7 +1030,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Movements">
-            <EntityTypeMapping TypeName="EbayModel.Movements">
+            <EntityTypeMapping TypeName="ShopBayModel.Movements">
               <MappingFragment StoreEntitySet="Movements">
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
@@ -1039,7 +1039,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductCommentary">
-            <EntityTypeMapping TypeName="EbayModel.ProductCommentary">
+            <EntityTypeMapping TypeName="ShopBayModel.ProductCommentary">
               <MappingFragment StoreEntitySet="ProductCommentary">
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -1049,7 +1049,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductsSold">
-            <EntityTypeMapping TypeName="EbayModel.ProductsSold">
+            <EntityTypeMapping TypeName="ShopBayModel.ProductsSold">
               <MappingFragment StoreEntitySet="ProductsSold">
                 <ScalarProperty Name="BuyerID" ColumnName="BuyerID" />
                 <ScalarProperty Name="SellerID" ColumnName="SellerID" />
@@ -1062,7 +1062,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProfileCommentary">
-            <EntityTypeMapping TypeName="EbayModel.ProfileCommentary">
+            <EntityTypeMapping TypeName="ShopBayModel.ProfileCommentary">
               <MappingFragment StoreEntitySet="ProfileCommentary">
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="RatedUserID" ColumnName="RatedUserID" />
@@ -1071,7 +1071,7 @@ advertencia 6002: La tabla o vista 'Ebay.dbo.ProfileCommentary' no tiene definid
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="ProductCategory" TypeName="EbayModel.ProductCategory" StoreEntitySet="ProductCategory">
+          <AssociationSetMapping Name="ProductCategory" TypeName="ShopBayModel.ProductCategory" StoreEntitySet="ProductCategory">
             <EndProperty Name="Category">
               <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
             </EndProperty>

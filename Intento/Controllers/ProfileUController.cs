@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Intento.Controllers
 {
-    public class ProfileController : Controller
+    public class ProfileUController : Controller
     {
         // GET: Profile
         public ActionResult Profile()
