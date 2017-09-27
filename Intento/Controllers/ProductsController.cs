@@ -10,11 +10,10 @@ namespace Intento.Controllers
     {
         Models.EbayEntities bd = new Models.EbayEntities();
         // GET: Products
-        public ActionResult Products(string id)
+        public ActionResult Products(int id)
         {
             var categories = bd.Category.ToList();
-            var category=categories[0];
-            var p = category.Products.ToList();
+            var p = categories[id-1].Products.ToList();
             return View(p);
         }
     }
