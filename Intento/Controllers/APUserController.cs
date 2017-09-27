@@ -9,7 +9,7 @@ namespace Intento.Controllers
     public class APUserController : Controller
     {
      
-        public ActionResult APUser()
+        public ActionResult APUser(int id)
         {
             return View();
         }

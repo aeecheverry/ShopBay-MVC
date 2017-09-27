@@ -1,4 +1,4 @@
-﻿
+﻿@model Intento.Models.Products
 @{
     ViewBag.Title = "Product";
 }
@@ -50,28 +50,28 @@
             <div class="py-2">
                 <span class="text-muted">
                     Seller:
-                </span><a href="Profile.aspx" class="">Name Seller</a>
+                </span><a href="@Url.Action("APUser","APUser",new { id=Model.UserID})" class="">@Model.UserID</a>
             </div>
             <!--Calificación del produto-->
-            <span class="text-muted align-middle">4.2</span><span class="text-muted align-middle pl-2">product rating</span>
+            <span class="text-muted align-middle">@Model.Rate</span><span class="text-muted align-middle pl-2">product rating</span>
 
             <!--Título del producto-->
-            <h3 class="pt-1 text-normal">Producto la verga</h3>
+            <h3 class="pt-1 text-normal">@Model.Name</h3>
 
             <!--Precio del producto-->
             <span class="h3 d-block">
-                $<span class="">68000</span>
+                $<span class="">@Model.Price</span>
             </span>
 
             <!--Descripción del producto-->
-            <p class="pr-4">Aquí descripción perra, pon lo que queiras de tu producto. Aquí descripción perra, pon lo que queiras de tu producto.</p>
+            <p class="pr-4">@Model.Description</p>
 
             <div class="row mt-1">
 
                 <!--Cantidad a comprar-->
                 <div class="form-group col-sm-4">
                     <label for="quantity">Quantity</label>
-                    <input type="number" class="form-control" name="quantity" min="1" max="100" value="1">
+                    <input type="number" class="form-control" name="quantity" min="1" max="@Model.Existencies" value="1">
                 </div>
 
                 <!--Metodo de envío-->
@@ -87,7 +87,7 @@
             <div class="row my-0">
                 <!--Estado del producto-->
                 <div class="form-group col-sm-4">
-                    <span class="text-muted">State:</span><span class="px-2">New</span>
+                    <span class="text-muted">State:</span><span class="px-2">@Model.ProductCommentary</span>
                 </div>
             </div>
 
@@ -95,11 +95,11 @@
                 <!--Categoria a la que pertenece-->
                 <div class="form-group col-sm-6">
                     <span class="text-muted">Categories:</span>
-                    <a class="navi-link" href="Products.aspx">Aquí categoria</a>
+                    <a class="navi-link" href="#">@Model.Category</a>
                 </div>
                 <!--Identificador del producto-->
                 <div class="form-group col-sm-6">
-                    <span class="text-muted">Id:</span><span class="px-2">21457832</span>
+                    <span class="text-muted">Id:</span><span class="px-2">@Model.ProductID</span>
                 </div>
             </div>
 

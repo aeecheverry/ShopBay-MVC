@@ -8,10 +8,12 @@ namespace Intento.Controllers
 {
     public class ProductController : Controller
     {
+        Models.EbayEntities bd = new Models.EbayEntities();
         // GET: Product
-        public ActionResult Product()
+        public ActionResult Product(int id)
         {
-            return View();
+            var product = bd.Products.Find(id);
+            return View(product);
         }
     }
 }

@@ -7,12 +7,6 @@ namespace Intento.Models
 {
     public class ProductsViewModel
     {
-        Category category
-        {
-            get;set;
-        }
-        List<Products> products{
-            get;set;
-        }
+        
     }
 }
