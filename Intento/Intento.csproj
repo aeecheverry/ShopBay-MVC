@@ -187,6 +187,7 @@
     <Compile Include="Models\ProductsSold.cs">
       <DependentUpon>ShopBay.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProductsViewModel.cs" />
     <Compile Include="Models\ProfileCommentary.cs">
       <DependentUpon>ShopBay.tt</DependentUpon>
     </Compile>

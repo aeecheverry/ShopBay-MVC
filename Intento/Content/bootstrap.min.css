@@ -16,9 +16,9 @@
     transition: all 0.2s ease-out;
 }
 
-    .categoriesCard a {
-        text-decoration: none;
-    }
+.categoriesCard a {
+    text-decoration: none;
+}
 
 .categoriesCardHover:hover {
     transform: scale(1.028);
@@ -37,6 +37,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .descriptionCategories {
     overflow: hidden;
 }

@@ -13,5 +13,6 @@ namespace Intento.Controllers
         {
             return View(bd.Category.ToList());
         }
+        
     }
 }
