@@ -14,5 +14,10 @@ namespace Intento.Controllers
         {
             return View(bd.Users.Find(id));
         }
+
+        public PartialViewResult History()
+        {
+            return PartialView();
+        }
     }
 }

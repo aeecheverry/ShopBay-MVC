@@ -270,6 +270,7 @@
     <Content Include="Models\ShopBay.edmx.diagram">
       <DependentUpon>ShopBay.edmx</DependentUpon>
     </Content>
+    <Content Include="Views\ProfileU\History.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

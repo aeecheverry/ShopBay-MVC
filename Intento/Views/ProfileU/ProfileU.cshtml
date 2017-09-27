@@ -11,7 +11,7 @@
             <!--Menú del perfil de usuario-->
             <div class="row text-center menuBar">
                 <a href="@Url.Action( "ProfileU" , "ProfileU" , new { id=Model.UserID})" class="nav-item col-12 bg-light py-2">Profile</a>
-                <a href="#" class="nav-item col-12 bg-light py-2">Sales History</a>
+                <a href="@Url.Action( "History" , "ProfileU")" class="nav-item col-12 bg-light py-2">Sales History</a>
             </div>
         </div>
         <div class="col-md-9">
@@ -27,6 +27,7 @@
                     </div>
 
                 </div>
+                @Html.Partial("History");
                 <!--Información basica del usuario-->
                 <div class="col-md-8">
                     <form class="row">
