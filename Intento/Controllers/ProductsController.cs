@@ -12,9 +12,15 @@ namespace Intento.Controllers
         // GET: Products
         public ActionResult Products(int id)
         {
-            var category = bd.Category.Find(id);//Hay que guardar en un viewbag para usarla en el menu de categorías de productos
-            var p = category.Products.ToList();
-            return View(p);
+            //Hay que guardar en un viewbag para usarla en el menu de categorías de productos
+            ViewBag.categories = bd.Category.ToList();
+
+            var category = bd.Category.Find(id);
+
+            ViewBag.categoryTitle = category.CategoryTitle;
+            var productsList = category.Products.ToList();
+
+            return View(productsList);
         }
     }
 }

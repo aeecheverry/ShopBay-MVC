@@ -50,7 +50,7 @@
             <div class="py-2">
                 <span class="text-muted">
                     Seller:
-                </span><a href="@Url.Action("APUser","APUser",new { id=Model.UserID})" class="">@Model.UserID</a>
+                </span><a href="@Url.Action("ProfileU","ProfileU",new { id=ViewBag.Seller.UserID})" class="">@ViewBag.Seller.Username</a>
             </div>
             <!--Calificación del produto-->
             <span class="text-muted align-middle">@Model.Rate</span><span class="text-muted align-middle pl-2">product rating</span>
@@ -95,7 +95,7 @@
                 <!--Categoria a la que pertenece-->
                 <div class="form-group col-sm-6">
                     <span class="text-muted">Categories:</span>
-                    <a class="navi-link" href="#">@Model.Category</a>
+                    <a class="navi-link" href="#">@ViewBag.Category</a>
                 </div>
                 <!--Identificador del producto-->
                 <div class="form-group col-sm-6">

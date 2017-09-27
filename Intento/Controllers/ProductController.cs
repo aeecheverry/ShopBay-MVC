@@ -13,6 +13,8 @@ namespace Intento.Controllers
         public ActionResult Product(int id)
         {
             var product = bd.Products.Find(id);
+            ViewBag.Seller = bd.Users.Find(product.UserID);
+            //ViewBag.Category = product.
             return View(product);
         }
     }
