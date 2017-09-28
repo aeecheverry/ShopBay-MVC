@@ -22,5 +22,34 @@ namespace Intento.Controllers
 
             return View(productsList);
         }
+        [HttpPost]
+        public ActionResult Products(string keyWords)
+        {
+            ViewBag.categories = bd.Category.ToList();
+            ViewBag.categoryTitle = "Result of " + keyWords;
+            if (!String.IsNullOrEmpty(keyWords) && !keyWords.Trim().Equals(""))
+            {
+                List<Models.Products> Tabla = bd.Products.ToList();
+                List<Models.Products> Resultado = new List<Models.Products>();
+                foreach (Models.Products i in Tabla)
+                {
+                    string[] elements = keyWords.Replace(' ', ';').Split(';');
+                    foreach (string key in elements)
+                    {
+                        string name = i.Name.ToLower();
+                        if (key != "" && name.Contains(key.ToLower()))
+                        {
+                            Resultado.Add(i);
+                        }
+                    }
+                }
+                return View(Resultado.AsQueryable());
+            }
+            else
+            {
+                var Query = from product in bd.Products select product;
+                return View(Query);
+            }
+        }
     }
 }

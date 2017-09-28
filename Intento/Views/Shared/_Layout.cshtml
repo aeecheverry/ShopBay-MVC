@@ -18,16 +18,15 @@
         </button>
 
         <div class="collapse navbar-collapse row" id="navbarSupportedContent">
-            <div class="form-inline my-1 my-lg-1 col justify-content-md-center">
-                <input class="form-control mr-sm-2 w-50" type="text" placeholder="Search" aria-label="Search" id="bus" runat="server" />
-                <button class="btn btn-outline-primary my-1 my-sm-0" type="submit" id="but" runat="server" onclick="">Search</button>
-                <label id="controlID" runat="server"></label>
-            </div>
-            <div class="navbar-nav mr-auto col-2 col-xs-5 col-sm-4 col-md-3 justify-content-end">
-                <a>@Html.ActionLink("Sign In" , "SignIn" , "SignIn" , "SignIn" , new { @class="nav-item nav-link" })<span class="sr-only">(current)</span></a>
-                <a>@Html.ActionLink("Register", "Register", "Register" , "Register", new { @class = "nav-item nav-link" })</a>
-            </div>
-        </div>
+                <form action="\Products\Products" method="post" class="form-inline my-1 my-lg-1 col justify-content-md-center">
+                    <input class="form-control mr-sm-2 w-50" type="text" placeholder="Search" aria-label="Search" id="bus" name="keyWords" />
+                    <button class="btn btn-outline-primary my-1 my-sm-0" type="submit" id="but">Search</button>
+                </form>
+                <div class="navbar-nav mr-auto col-2 col-xs-5 col-sm-4 col-md-3 justify-content-end">
+                    <a>@Html.ActionLink("Sign In", "SignIn", "SignIn", "SignIn", new { @class = "nav-item nav-link" })<span class="sr-only">(current)</span></a>
+                    <a>@Html.ActionLink("Register", "Register", "Register", "Register", new { @class = "nav-item nav-link" })</a>
+                </div>
+</div>
     </nav>
 
     <div class="container-fluid body-content">
